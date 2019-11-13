@@ -1,5 +1,5 @@
 def can_build(plat):
-    return plat == 'android'
+    return plat == 'android' or plat == 'iphone'
 
 def configure(env):
     if env['platform'] == 'android':
