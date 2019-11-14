@@ -11,7 +11,7 @@
 #include "register_types.h"
 #include "ios/GodotPlayGameServices.h"
 
-void register_playgameservices_types() {
+void register_gpgs_types() {
 #if VERSION_MAJOR == 3
     Engine::get_singleton()->add_singleton(Engine::Singleton("GodotPlayGameServices", memnew(GodotPlayGameServices)));
 #else
@@ -19,5 +19,5 @@ void register_playgameservices_types() {
 #endif
 }
 
-void unregister_playgameservices_types() {
+void unregister_gpgs_types() {
 }

@@ -29,7 +29,7 @@ void GodotPlayGameServices::startConnectionCallback(){
         dispatch_async(dispatch_get_main_queue(), ^{
             Object *obj = ObjectDB::get_instance(callbackID);
             NSLog(@"Yayyy, we have the interwebs!");
-            obj->call_deferred(String("update_connection_status"), [true]);
+            obj->call_deferred(String("update_connection_status"), true);
         });
 
     };
@@ -41,7 +41,7 @@ void GodotPlayGameServices::startConnectionCallback(){
         dispatch_async(dispatch_get_main_queue(), ^{
             Object *obj = ObjectDB::get_instance(callbackID);
             NSLog(@"Someone broke the internet :(");
-            obj->call_deferred(String("update_connection_status"), [false]);
+            obj->call_deferred(String("update_connection_status"), false);
         });
     };
 

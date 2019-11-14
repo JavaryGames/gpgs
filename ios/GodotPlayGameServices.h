@@ -13,7 +13,7 @@ class GodotPlayGameServices : public Reference {
     OBJ_TYPE(GodotPlayGameServices, Reference);
 #endif
 
- int callbackID
+ int callbackID;
 
 protected:
     static void _bind_methods();
@@ -24,9 +24,9 @@ public:
     
     void rate(const String &url_prefix, const String &url_prefix_fallback, const String &id_format, const String &app_id);
   */
-    void GodotPlayGameServices::startConnectionCallback();
-    void GodotPlayGameServices::setConnectionCallbackId(int objId);
-    void GodotPlayGameServices::isOnline(); 
+    void startConnectionCallback();
+    void setConnectionCallbackId(int objId);
+    void isOnline(); 
 
     GodotPlayGameServices();
     ~GodotPlayGameServices();

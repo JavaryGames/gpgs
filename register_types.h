@@ -1,2 +1,2 @@
-void register_godotplaygameservices_types();
-void unregister_godotplaygameservices_types();
+void register_gpgs_types();
+void unregister_gpgs_types();
