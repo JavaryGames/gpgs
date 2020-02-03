@@ -3,6 +3,7 @@ def can_build(plat):
 
 def configure(env):
     if env['platform'] == 'android':
+        return
 
         env.android_add_maven_repository("url 'https://maven.google.com'")
 
