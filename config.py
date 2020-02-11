@@ -3,6 +3,7 @@ def can_build(plat):
 
 def configure(env):
     if env['platform'] == 'android':
+        env.disable_module()
         return
 
         env.android_add_maven_repository("url 'https://maven.google.com'")
@@ -15,4 +16,3 @@ def configure(env):
 
         env.android_add_java_dir("android")
         env.android_add_to_manifest("android/AndroidManifestChunk.xml")
-        env.disable_module()
